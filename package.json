@@ -27,8 +27,8 @@
         "title": "Rule Gamma"
       },
       {
-        "command": "cssGps.customRules",
-        "title": "Custom Rules..."
+        "command": "cssGps.manageRules",
+        "title": "Manage Rules..."
       }
     ],
     "menus": {
@@ -53,8 +53,8 @@
           "group": "1_presetRules@3"
         },
         {
-          "command": "cssGps.customRules",
-          "group": "2_customRules@1"
+          "command": "cssGps.manageRules",
+          "group": "2_manage@1"
         }
       ]
     },
@@ -63,7 +63,93 @@
         "id": "cssGps.submenu",
         "label": "CSS GPS"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "CSS GPS",
+      "properties": {
+        "cssGps.projectPrefix": {
+          "type": "string",
+          "default": "",
+          "maxLength": 50,
+          "description": "Option 1: Custom project prefix (max 50 chars)"
+        },
+        "cssGps.pathHashLength": {
+          "type": "number",
+          "default": 8,
+          "minimum": 4,
+          "maximum": 32,
+          "description": "Option 2: Length of path hash (4-32 chars)"
+        },
+        "cssGps.reversedNameCase": {
+          "type": "string",
+          "default": "lowercase",
+          "enum": ["lowercase", "uppercase", "preserve"],
+          "description": "Option 3: Case for reversed file name"
+        },
+        "cssGps.domHashLength": {
+          "type": "number",
+          "default": 8,
+          "minimum": 4,
+          "maximum": 32,
+          "description": "Option 4: Length of DOM hash (4-32 chars)"
+        },
+        "cssGps.abbrLength": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Options 5 & 6: Abbreviation length for DOM/Path"
+        },
+        "cssGps.releases": {
+          "type": "array",
+          "default": [],
+          "description": "Option 7: Release schedule with expiry dates",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Release name"
+              },
+              "expiry": {
+                "type": "string",
+                "description": "Expiry date (YYYY-MM-DD)"
+              }
+            }
+          }
+        },
+        "cssGps.defaultRelease": {
+          "type": "string",
+          "default": "stable",
+          "description": "Option 7: Default release name (when all expire)"
+        },
+        "cssGps.customRules": {
+          "type": "array",
+          "default": [],
+          "description": "Custom rules created by user",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "options": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "separator": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
