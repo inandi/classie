@@ -1,5 +1,5 @@
 /**
- * CSS GPS Rules
+ * Classie Rules
  * Export all rule classes
  */
 

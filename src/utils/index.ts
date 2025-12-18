@@ -1,5 +1,5 @@
 /**
- * CSS GPS Utilities
+ * Classie Utilities
  * Export all utility functions
  */
 

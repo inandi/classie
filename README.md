@@ -1,4 +1,4 @@
-# CSS GPS
+# Classie
 
 A VS Code extension.
 

@@ -1,7 +1,7 @@
 import { BaseOption, OptionContext } from '../options';
 
 /**
- * Base class for all CSS GPS rules
+ * Base class for all Classie rules
  * A rule is a combination of options with a specific separator pattern
  */
 export abstract class BaseRule {

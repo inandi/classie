@@ -1,7 +1,7 @@
 {
-  "name": "css-gps",
-  "displayName": "CSS GPS",
-  "description": "CSS GPS Extension",
+  "name": "classie",
+  "displayName": "Classie",
+  "description": "Classie Extension",
   "version": "1.0.0",
   "publisher": "iNandi",
   "engines": {
@@ -15,92 +15,92 @@
   "contributes": {
     "commands": [
       {
-        "command": "cssGps.ruleAlpha",
+        "command": "classie.ruleAlpha",
         "title": "Rule Alpha"
       },
       {
-        "command": "cssGps.ruleBeta",
+        "command": "classie.ruleBeta",
         "title": "Rule Beta"
       },
       {
-        "command": "cssGps.ruleGamma",
+        "command": "classie.ruleGamma",
         "title": "Rule Gamma"
       },
       {
-        "command": "cssGps.manageRules",
+        "command": "classie.manageRules",
         "title": "Manage Rules..."
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "submenu": "cssGps.submenu",
-          "group": "cssGps@1",
+          "submenu": "classie.submenu",
+          "group": "classie@1",
           "when": "resourceExtname == .html || resourceExtname == .tpl || resourceExtname == .phtml"
         }
       ],
-      "cssGps.submenu": [
+      "classie.submenu": [
         {
-          "command": "cssGps.ruleAlpha",
+          "command": "classie.ruleAlpha",
           "group": "1_presetRules@1"
         },
         {
-          "command": "cssGps.ruleBeta",
+          "command": "classie.ruleBeta",
           "group": "1_presetRules@2"
         },
         {
-          "command": "cssGps.ruleGamma",
+          "command": "classie.ruleGamma",
           "group": "1_presetRules@3"
         },
         {
-          "command": "cssGps.manageRules",
+          "command": "classie.manageRules",
           "group": "2_manage@1"
         }
       ]
     },
     "submenus": [
       {
-        "id": "cssGps.submenu",
-        "label": "CSS GPS"
+        "id": "classie.submenu",
+        "label": "Classie"
       }
     ],
     "configuration": {
-      "title": "CSS GPS",
+      "title": "Classie",
       "properties": {
-        "cssGps.projectPrefix": {
+        "classie.projectPrefix": {
           "type": "string",
           "default": "",
           "maxLength": 50,
           "description": "Option 1: Custom project prefix (max 50 chars)"
         },
-        "cssGps.pathHashLength": {
+        "classie.pathHashLength": {
           "type": "number",
           "default": 8,
           "minimum": 4,
           "maximum": 32,
           "description": "Option 2: Length of path hash (4-32 chars)"
         },
-        "cssGps.reversedNameCase": {
+        "classie.reversedNameCase": {
           "type": "string",
           "default": "lowercase",
           "enum": ["lowercase", "uppercase", "preserve"],
           "description": "Option 3: Case for reversed file name"
         },
-        "cssGps.domHashLength": {
+        "classie.domHashLength": {
           "type": "number",
           "default": 8,
           "minimum": 4,
           "maximum": 32,
           "description": "Option 4: Length of DOM hash (4-32 chars)"
         },
-        "cssGps.abbrLength": {
+        "classie.abbrLength": {
           "type": "number",
           "default": 3,
           "minimum": 1,
           "maximum": 10,
           "description": "Options 5 & 6: Abbreviation length for DOM/Path"
         },
-        "cssGps.releases": {
+        "classie.releases": {
           "type": "array",
           "default": [],
           "description": "Option 7: Release schedule with expiry dates",
@@ -118,12 +118,12 @@
             }
           }
         },
-        "cssGps.defaultRelease": {
+        "classie.defaultRelease": {
           "type": "string",
           "default": "stable",
           "description": "Option 7: Default release name (when all expire)"
         },
-        "cssGps.customRules": {
+        "classie.customRules": {
           "type": "array",
           "default": [],
           "description": "Custom rules created by user",

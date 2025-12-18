@@ -1,5 +1,5 @@
 /**
- * CSS GPS Options
+ * Classie Options
  * Export all option classes
  */
 

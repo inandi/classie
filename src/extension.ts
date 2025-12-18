@@ -12,25 +12,25 @@ const SUPPORTED_EXTENSIONS = ['.html', '.tpl', '.phtml'];
 let customRuleDisposables: vscode.Disposable[] = [];
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log('CSS GPS extension is now active!');
+    console.log('Classie extension is now active!');
 
     // Register Rule Alpha command
-    const ruleAlphaCommand = vscode.commands.registerCommand('cssGps.ruleAlpha', async () => {
+    const ruleAlphaCommand = vscode.commands.registerCommand('classie.ruleAlpha', async () => {
         await executeRule(PresetRules.alpha);
     });
 
     // Register Rule Beta command
-    const ruleBetaCommand = vscode.commands.registerCommand('cssGps.ruleBeta', async () => {
+    const ruleBetaCommand = vscode.commands.registerCommand('classie.ruleBeta', async () => {
         await executeRule(PresetRules.beta);
     });
 
     // Register Rule Gamma command
-    const ruleGammaCommand = vscode.commands.registerCommand('cssGps.ruleGamma', async () => {
+    const ruleGammaCommand = vscode.commands.registerCommand('classie.ruleGamma', async () => {
         await executeRule(PresetRules.gamma);
     });
 
     // Register Manage Rules command (opens config panel)
-    const manageRulesCommand = vscode.commands.registerCommand('cssGps.manageRules', () => {
+    const manageRulesCommand = vscode.commands.registerCommand('classie.manageRules', () => {
         ConfigPanel.show(context);
     });
 
@@ -63,7 +63,7 @@ async function executeRule(rule: { name: string; generate: (context: OptionConte
     // Check if file type is supported
     if (!SUPPORTED_EXTENSIONS.includes(fileExtension)) {
         vscode.window.showErrorMessage(
-            `CSS GPS only works with ${SUPPORTED_EXTENSIONS.join(', ')} files.`
+            `Classie only works with ${SUPPORTED_EXTENSIONS.join(', ')} files.`
         );
         return;
     }
@@ -187,11 +187,11 @@ function registerCustomRuleCommands(context: vscode.ExtensionContext): void {
     customRuleDisposables.forEach(d => d.dispose());
     customRuleDisposables = [];
 
-    const config = vscode.workspace.getConfiguration('cssGps');
+    const config = vscode.workspace.getConfiguration('classie');
     const customRules = config.get<CustomRuleConfig[]>('customRules', []);
 
     customRules.forEach((rule, index) => {
-        const commandId = `cssGps.customRule.${rule.id}`;
+        const commandId = `classie.customRule.${rule.id}`;
         
         const disposable = vscode.commands.registerCommand(commandId, async () => {
             await executeCustomRule(rule);
@@ -204,7 +204,7 @@ function registerCustomRuleCommands(context: vscode.ExtensionContext): void {
     // Listen for configuration changes to re-register commands
     context.subscriptions.push(
         vscode.workspace.onDidChangeConfiguration(e => {
-            if (e.affectsConfiguration('cssGps.customRules')) {
+            if (e.affectsConfiguration('classie.customRules')) {
                 registerCustomRuleCommands(context);
             }
         })
@@ -238,7 +238,7 @@ async function executeCustomRule(ruleConfig: CustomRuleConfig): Promise<void> {
 
     if (!SUPPORTED_EXTENSIONS.includes(fileExtension)) {
         vscode.window.showErrorMessage(
-            `CSS GPS only works with ${SUPPORTED_EXTENSIONS.join(', ')} files.`
+            `Classie only works with ${SUPPORTED_EXTENSIONS.join(', ')} files.`
         );
         return;
     }
