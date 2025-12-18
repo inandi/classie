@@ -1,5 +1,5 @@
 /**
- * CSS GPS Panels
+ * Classie Panels
  */
 export { ConfigPanel } from './ConfigPanel';
 
