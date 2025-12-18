@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 /**
- * Base interface for all CSS GPS options
+ * Base interface for all Classie options
  */
 export interface OptionContext {
     /** The VS Code text document */
@@ -21,7 +21,7 @@ export interface OptionContext {
 }
 
 /**
- * Base class for all CSS GPS options
+ * Base class for all Classie options
  */
 export abstract class BaseOption {
     /** Unique identifier for this option */
@@ -44,7 +44,7 @@ export abstract class BaseOption {
      * Get configuration value from VS Code settings
      */
     protected getConfig<T>(key: string, defaultValue: T): T {
-        const config = vscode.workspace.getConfiguration('cssGps');
+        const config = vscode.workspace.getConfiguration('classie');
         return config.get<T>(key, defaultValue);
     }
 }

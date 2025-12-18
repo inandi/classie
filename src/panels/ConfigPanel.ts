@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 /**
- * Configuration Panel for CSS GPS
+ * Configuration Panel for Classie
  * Shows all options, preset rules, and custom rule management
  */
 export class ConfigPanel {
@@ -14,8 +14,8 @@ export class ConfigPanel {
         }
 
         ConfigPanel.panel = vscode.window.createWebviewPanel(
-            'cssGpsConfig',
-            'CSS GPS - Configuration',
+            'classieConfig',
+            'Classie - Configuration',
             vscode.ViewColumn.One,
             {
                 enableScripts: true,
@@ -28,7 +28,7 @@ export class ConfigPanel {
         // Handle messages from webview
         ConfigPanel.panel.webview.onDidReceiveMessage(
             async (message) => {
-                const config = vscode.workspace.getConfiguration('cssGps');
+                const config = vscode.workspace.getConfiguration('classie');
                 
                 switch (message.command) {
                     case 'loadConfig':
@@ -71,7 +71,7 @@ export class ConfigPanel {
     private static async sendConfigToWebview(): Promise<void> {
         if (!ConfigPanel.panel) return;
 
-        const config = vscode.workspace.getConfiguration('cssGps');
+        const config = vscode.workspace.getConfiguration('classie');
         
         ConfigPanel.panel.webview.postMessage({
             command: 'configLoaded',
@@ -94,7 +94,7 @@ export class ConfigPanel {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS GPS Configuration</title>
+    <title>Classie Configuration</title>
     <style>
         :root {
             --bg-primary: #1e1e1e;
@@ -581,7 +581,7 @@ export class ConfigPanel {
 </head>
 <body>
     <div class="header">
-        <h1>📍 CSS GPS</h1>
+        <h1>📍 Classie</h1>
         <span class="badge">v1.0.0</span>
     </div>
     
