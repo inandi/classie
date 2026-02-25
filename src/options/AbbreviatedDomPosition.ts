@@ -1,3 +1,15 @@
+/**
+ * Classie Option 5: Abbreviated DOM Position Module
+ *
+ * Human-readable DOM path using first N characters of each ancestor tag.
+ * Excludes html, head, body, script, style. Uses classie.abbrLength.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import { BaseOption, OptionContext } from './BaseOption';
 import { getDomAncestors } from '../utils/domParser';
 

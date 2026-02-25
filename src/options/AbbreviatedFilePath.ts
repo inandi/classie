@@ -1,3 +1,15 @@
+/**
+ * Classie Option 6: Abbreviated File Path Module
+ *
+ * Human-readable path from first N chars of each folder/file name.
+ * Skips common roots (www, htdocs, public_html, src, app). Uses classie.abbrLength.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import { BaseOption, OptionContext } from './BaseOption';
 
 /**

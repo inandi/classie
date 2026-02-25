@@ -1,3 +1,15 @@
+/**
+ * Classie Extension Main Module
+ *
+ * VS Code extension for generating and applying CSS class names to HTML elements.
+ * Provides preset rules (Alpha, Beta, Gamma), custom rules, and a configuration panel.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import * as vscode from 'vscode';
 import * as path from 'path';
 import { PresetRules } from './rules';

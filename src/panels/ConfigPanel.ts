@@ -1,3 +1,15 @@
+/**
+ * Classie Configuration Panel Module
+ *
+ * Webview panel for Classie settings: options (7), preset rules (3), custom rules,
+ * and release schedule. Handles load/save config and postMessage with extension host.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import * as vscode from 'vscode';
 
 /**

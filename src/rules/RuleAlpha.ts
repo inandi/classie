@@ -1,3 +1,15 @@
+/**
+ * Classie Rule Alpha Module
+ *
+ * Preset rule: Project Prefix + Abbreviated File Path + Path Hash.
+ * Example: project-sample--int-tem-cli-uti--a3f2b9c1
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import { BaseRule } from './BaseRule';
 import { BaseOption, ProjectPrefix, AbbreviatedFilePath, PathHash } from '../options';
 

@@ -1,3 +1,15 @@
+/**
+ * Classie Rules Base Module
+ *
+ * Abstract base class for all Classie rules. A rule combines options with a separator
+ * to generate CSS class names from file path, DOM position, and settings.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import { BaseOption, OptionContext } from '../options';
 
 /**

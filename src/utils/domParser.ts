@@ -1,6 +1,13 @@
 /**
- * DOM Parser Utilities
- * Functions for parsing HTML and extracting DOM information
+ * Classie DOM Parser Utilities Module
+ *
+ * Parses HTML text to get ancestor chain, find element at offset, and extract
+ * tag/attributes/class. Used by options and extension for class generation.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
  */
 
 // Self-closing HTML tags

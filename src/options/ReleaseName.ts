@@ -1,3 +1,15 @@
+/**
+ * Classie Option 7: Release Name Module
+ *
+ * Version identifier from release schedule with expiry dates (UTC).
+ * Returns earliest non-expired release or classie.defaultRelease.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import { BaseOption, OptionContext } from './BaseOption';
 
 /**

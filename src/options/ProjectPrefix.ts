@@ -1,3 +1,15 @@
+/**
+ * Classie Option 1: Project Prefix Module
+ *
+ * Custom text prefix for the entire project (max 50 chars).
+ * Sanitized for CSS: lowercase, spaces to hyphens, invalid chars removed.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
+ */
+
 import { BaseOption, OptionContext } from './BaseOption';
 
 /**

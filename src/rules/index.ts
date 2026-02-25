@@ -1,6 +1,13 @@
 /**
- * Classie Rules
- * Export all rule classes
+ * Classie Rules Index Module
+ *
+ * Exports all rule classes and preset rules (Alpha, Beta, Gamma).
+ * Provides getAllPresetRules() and getRuleById() helpers.
+ *
+ * @author Gobinda Nandi <gobinda.nandi.public@gmail.com>
+ * @since 1.1.1 [10-12-2025]
+ * @version 1.1.1
+ * @copyright (c) 2025 Gobinda Nandi
  */
 
 export { BaseRule } from './BaseRule';
