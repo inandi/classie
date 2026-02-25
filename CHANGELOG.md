@@ -1,3 +1,12 @@
+# Release v1.1.2 - 2026-02-25
+
+## Improvements
+- Enhanced README with detailed usage instructions (getting started, preset rules, seven options, managing rules, team consistency).
+- Added logo image for the extension (`media/logo.png`).
+- Cleaned up release notes (removed trailing whitespace).
+
+---
+
 # Release v1.1.1 - 2026-02-25
 
 ## New Features
