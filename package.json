@@ -1,0 +1,168 @@
+{
+  "name": "classie",
+  "displayName": "Classie",
+  "description": "Classie Extension",
+  "version": "1.0.0",
+  "publisher": "iNandi",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "classie.ruleAlpha",
+        "title": "Rule Alpha"
+      },
+      {
+        "command": "classie.ruleBeta",
+        "title": "Rule Beta"
+      },
+      {
+        "command": "classie.ruleGamma",
+        "title": "Rule Gamma"
+      },
+      {
+        "command": "classie.manageRules",
+        "title": "Manage Rules..."
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "classie.submenu",
+          "group": "classie@1",
+          "when": "resourceExtname == .html || resourceExtname == .tpl || resourceExtname == .phtml"
+        }
+      ],
+      "classie.submenu": [
+        {
+          "command": "classie.ruleAlpha",
+          "group": "1_presetRules@1"
+        },
+        {
+          "command": "classie.ruleBeta",
+          "group": "1_presetRules@2"
+        },
+        {
+          "command": "classie.ruleGamma",
+          "group": "1_presetRules@3"
+        },
+        {
+          "command": "classie.manageRules",
+          "group": "2_manage@1"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "classie.submenu",
+        "label": "Classie"
+      }
+    ],
+    "configuration": {
+      "title": "Classie",
+      "properties": {
+        "classie.projectPrefix": {
+          "type": "string",
+          "default": "",
+          "maxLength": 50,
+          "description": "Option 1: Custom project prefix (max 50 chars)"
+        },
+        "classie.pathHashLength": {
+          "type": "number",
+          "default": 8,
+          "minimum": 4,
+          "maximum": 32,
+          "description": "Option 2: Length of path hash (4-32 chars)"
+        },
+        "classie.reversedNameCase": {
+          "type": "string",
+          "default": "lowercase",
+          "enum": ["lowercase", "uppercase", "preserve"],
+          "description": "Option 3: Case for reversed file name"
+        },
+        "classie.domHashLength": {
+          "type": "number",
+          "default": 8,
+          "minimum": 4,
+          "maximum": 32,
+          "description": "Option 4: Length of DOM hash (4-32 chars)"
+        },
+        "classie.abbrLength": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Options 5 & 6: Abbreviation length for DOM/Path"
+        },
+        "classie.releases": {
+          "type": "array",
+          "default": [],
+          "description": "Option 7: Release schedule with expiry dates",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Release name"
+              },
+              "expiry": {
+                "type": "string",
+                "description": "Expiry date (YYYY-MM-DD)"
+              }
+            }
+          }
+        },
+        "classie.defaultRelease": {
+          "type": "string",
+          "default": "stable",
+          "description": "Option 7: Default release name (when all expire)"
+        },
+        "classie.customRules": {
+          "type": "array",
+          "default": [],
+          "description": "Custom rules created by user",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "options": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "separator": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^4.9.0"
+  }
+}
