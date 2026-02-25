@@ -1,4 +1,4 @@
-# Classie
+# Classie [Beta]
 
 A VS Code extension.
 
