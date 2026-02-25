@@ -1,9 +1,19 @@
 {
   "name": "classie",
   "displayName": "Classie",
-  "description": "Classie Extension",
-  "version": "1.1.1",
+  "description": "Generate smart, context-aware CSS class names in HTML with customizable rules. Designed for rapid prototyping, consistency, and flexible naming conventions in any web project.",
+  "version": "1.1.2",
   "publisher": "iNandi",
+  "author": {
+    "name": "Gobinda Nandi",
+    "email": "gobinda.nandi.public@gmail.com",
+    "url": "https://github.com/iNandi"
+  },
+  "icon": "media/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iNandi/classie"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },

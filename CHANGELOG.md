@@ -10,4 +10,3 @@
 - File-level JSDoc comments added across the codebase (version 1.1.1, author/since/copyright).
 
 ---
-
