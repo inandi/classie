@@ -1,8 +1,7 @@
-# Release v1.1.3 - 2026-03-01
+# Release v1.1.4 - 2026-03-01
 
 ## Improvements
 - Bumped version to 1.1.3 and updated author URL in package.json.
-
 ---
 
 # Release v1.1.2 - 2026-02-25
