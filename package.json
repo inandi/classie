@@ -2,7 +2,8 @@
   "name": "classie",
   "displayName": "Classie",
   "description": "Generate smart, context-aware CSS class names in HTML with customizable rules. Designed for rapid prototyping, consistency, and flexible naming conventions in any web project.",
-  "version": "1.1.4",
+  "version": "2.1.1",
+  "preview": true,
   "publisher": "iNandi",
   "author": {
     "name": "Gobinda Nandi",
