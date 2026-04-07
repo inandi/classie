@@ -1,3 +1,15 @@
+# Release v2.1.1 - 2026-04-07
+
+## New Features
+- Release workflow now supports publishing to both Visual Studio Marketplace and Open VSX Registry in the same run.
+
+## Improvements
+- Added release pre-checks to ensure the release argument matches the package manifest version before continuing.
+- Improved publishing-token handling and error flow so skipped/failed marketplace steps are reported clearly.
+- Marked the extension package as preview in manifest metadata.
+
+---
+
 # Release v1.1.4 - 2026-03-01
 
 ## Improvements
